@@ -63,7 +63,7 @@ Question: {state['question']}""")
         if subtasks and isinstance(subtasks[0], dict):
             subtasks = [t.get('subtask', str(t)) for t in subtasks]
     except json.JSONDecodeError:
-        subtasks = [state['questtion']]
+        subtasks = [state['question']]
 
     print(f"{len(subtasks)} subtasks created")
     return {"subtasks": subtasks, "iteration_count":0}
